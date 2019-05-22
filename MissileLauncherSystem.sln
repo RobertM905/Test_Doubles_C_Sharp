@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissileLauncher.Test", "MissileLauncher.Test\MissileLauncher.Test.csproj", "{D2FA96E0-8A9A-413E-A8C4-197197AF45D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissileLauncher.Core", "MissileLauncher.Core\MissileLauncher.Core.csproj", "{4BB72B22-2886-4114-81A6-F760511A1E65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2FA96E0-8A9A-413E-A8C4-197197AF45D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FA96E0-8A9A-413E-A8C4-197197AF45D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FA96E0-8A9A-413E-A8C4-197197AF45D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FA96E0-8A9A-413E-A8C4-197197AF45D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB72B22-2886-4114-81A6-F760511A1E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB72B22-2886-4114-81A6-F760511A1E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB72B22-2886-4114-81A6-F760511A1E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB72B22-2886-4114-81A6-F760511A1E65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
