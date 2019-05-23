@@ -11,6 +11,11 @@ Stub
 Mock
 Fakes
 
+FluentSimulator to Stub a GET Http request
+
 Todo
 
-Add example of fluent simulator to mock an API
+Spy API GET Request.
+Stub API POST Request.
+Spy API POST Request.
+
