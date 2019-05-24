@@ -1,7 +1,7 @@
 using FluentAssertions;
 using MissileLauncher.Core;
 
-namespace MissileLauncherTests
+namespace MissileLauncherTests.TestDoubles
 {
     public class MockMissile : Missile
     {
