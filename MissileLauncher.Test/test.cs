@@ -20,19 +20,32 @@ namespace MissileLauncherTests
         [SetUp]
         public void Setup()
         {
-            
-        }
-
-        [Test]
-        public void GetRequestTest()
-        {
             var response = new ApiResponse {Success = true};
             _simulator = new FluentSimulator("http://localhost:8050/");
             _simulator.Get("/api/v2/users").Responds(response);
             _simulator.Start();
             _apiGateway = new ApiGateway("http://localhost:8050/");
+        }
+
+        [Test]
+        public void GetRequestTest()
+        {
+
             var apiResponse = _apiGateway.RetrieveData();
             apiResponse.Success.Should().BeTrue();
+           
+        }
+
+        [Test]
+        public void GetRequestWithHeaderToken()
+        {
+            _apiGateway.RetrieveData();
+            _simulator.ReceivedRequests.First().Headers["Token"].Should().Be("xxx-xxx-xxx");
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
             _simulator.Stop();
         }
     }
@@ -44,6 +57,7 @@ namespace MissileLauncherTests
         public ApiGateway(string address)
         {
             _client = new HttpClient { BaseAddress = new Uri(address) };
+            _client.DefaultRequestHeaders.Add("Token", "xxx-xxx-xxx");
         }
 
         public ApiResponse RetrieveData()
