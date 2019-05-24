@@ -20,9 +20,8 @@ namespace MissileLauncherTests
         [SetUp]
         public void Setup()
         {
-            var response = new ApiResponse {Success = true};
             _simulator = new FluentSimulator("http://localhost:8050/");
-            _simulator.Get("/api/v2/users").Responds(response);
+            _simulator.Get("/api/v2/users").Responds("{Success: true}");
             _simulator.Start();
             _apiGateway = new ApiGateway("http://localhost:8050/");
         }
@@ -64,7 +63,6 @@ namespace MissileLauncherTests
         {
             var response = GetApiResponse("/api/v2/users");
             response.Wait();
-            
             return response.Result.ToObject<ApiResponse>();
         }
 
